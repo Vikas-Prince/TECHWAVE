@@ -1,0 +1,14 @@
+.culture {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-details,
+.sideContent {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sideContent::-webkit-scrollbar {
+  display: none;
+}
