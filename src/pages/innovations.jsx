@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Template from "../components/common/cmnTemp/cmnTemp";
 
 function Innovations() {
   const baseUrl = process.env.REACT_APP_API_URL;
 
   const [innovativeNews, setInnovativeNews] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNewsData = async () => {
@@ -22,7 +24,11 @@ function Innovations() {
     fetchNewsData();
   }, []);
 
-  return <Template page="Innovations News" data={innovativeNews} />;
+  if (sessionStorage.getItem("ltk") === null) {
+    navigate("/login");
+  } else {
+    return <Template page="Innovations News" data={innovativeNews} />;
+  }
 }
 
 export default Innovations;

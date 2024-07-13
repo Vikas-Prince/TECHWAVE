@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Template from "../components/common/cmnTemp/cmnTemp";
 
 function Politics() {
   const baseUrl = process.env.REACT_APP_API_URL;
 
   const [politicsNews, setPoliticsNews] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNewsData = async () => {
@@ -20,7 +22,11 @@ function Politics() {
     fetchNewsData();
   }, []);
 
-  return <Template page="Politics News" data={politicsNews} />;
+  if (sessionStorage.getItem("ltk") === null) {
+    navigate("/login");
+  } else {
+    return <Template page="Politics News" data={politicsNews} />;
+  }
 }
 
 export default Politics;

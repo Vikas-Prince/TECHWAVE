@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Template from "../../components/common/cmnTemp/cmnTemp";
 
 function Culture() {
   const baseUrl = process.env.REACT_APP_API_URL;
 
   const [cultureData, setCultureData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNewsData = async () => {
@@ -21,7 +23,11 @@ function Culture() {
     fetchNewsData();
   }, []);
 
-  return <Template page="Culture News" data={cultureData} />;
+  if (sessionStorage.getItem("ltk") === null) {
+    navigate("/login");
+  } else {
+    return <Template page="Culture News" data={cultureData} />;
+  }
 }
 
 export default Culture;

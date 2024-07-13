@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Template from "../components/common/cmnTemp/cmnTemp";
 
 function Sports() {
   const baseUrl = process.env.REACT_APP_API_URL;
 
   const [sportsNews, setSportsNews] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNewsData = async () => {
@@ -20,7 +22,11 @@ function Sports() {
     fetchNewsData();
   }, []);
 
-  return <Template page="Sports News" data={sportsNews} />;
+  if (sessionStorage.getItem("ltk") === null) {
+    navigate("/login");
+  } else {
+    return <Template page="Sports News" data={sportsNews} />;
+  }
 }
 
 export default Sports;

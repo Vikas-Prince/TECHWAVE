@@ -80,11 +80,32 @@ nav {
   margin-bottom: 0;
 }
 
-.branding {
-  font-weight: 500;
-  font-size: 25px;
+.login_signup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
 }
 
-strong span {
+.signup {
   color: orangered;
+}
+
+.login:hover {
+  color: #bfbebe;
+}
+
+.signup:hover {
+  color: rgb(213, 84, 37);
+}
+
+.logout {
+  margin: 0px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.username {
+  display: flex;
+  gap: 5px;
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Template from "../components/common/cmnTemp/cmnTemp";
 
 function Tech() {
   const baseUrl = process.env.REACT_APP_API_URL;
 
   const [techNews, setTechNews] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNewsData = async () => {
@@ -20,7 +22,11 @@ function Tech() {
     fetchNewsData();
   }, []);
 
-  return <Template page="Tech News" data={techNews} />;
+  if (sessionStorage.getItem("ltk") === null) {
+    navigate("/login");
+  } else {
+    return <Template page="Tech News" data={techNews} />;
+  }
 }
 
 export default Tech;

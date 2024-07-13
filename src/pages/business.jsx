@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Template from "../components/common/cmnTemp/cmnTemp";
 
 function Business() {
   const baseUrl = process.env.REACT_APP_API_URL;
 
   const [businessNews, setBusinessNews] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNewsData = async () => {
@@ -21,7 +23,11 @@ function Business() {
     fetchNewsData();
   }, []);
 
-  return <Template page="Business News" data={businessNews} />;
+  if (sessionStorage.getItem("ltk") === null) {
+    navigate("/login");
+  } else {
+    return <Template page="Business News" data={businessNews} />;
+  }
 }
 
 export default Business;

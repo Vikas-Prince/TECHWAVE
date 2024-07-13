@@ -12,6 +12,8 @@ import Tech from "./pages/tech";
 import Business from "./pages/business";
 import Sports from "./pages/sports";
 import Politics from "./pages/politics";
+import Login from "./pages/login/login.jsx";
+import Register from "./pages/Register/Register.jsx";
 import NewsDetails from "./components/common/cmnTemp/NewsDetails";
 const App = () => {
   return (
@@ -29,6 +31,8 @@ const App = () => {
             <Route path="/tech" element={<Tech />} />
             <Route path="/innovations" element={<Innovations />} />
             <Route path="/details" element={<NewsDetails />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Route>
         </Routes>
         <Footer />
