@@ -1,6 +1,7 @@
 FROM node:18
 LABEL managing="Vikas"
 WORKDIR /app
+COPY package*.json ./
 RUN npm install 
 COPY . .
 WORKDIR /app/TECHWAVE/
