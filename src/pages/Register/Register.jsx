@@ -28,7 +28,7 @@ function Register() {
           "Content-Type": "application/json",
         },
       })
-      .then(navigate("/"));
+      .then(navigate("/login"));
   };
 
   return (

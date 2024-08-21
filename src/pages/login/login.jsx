@@ -34,7 +34,8 @@ function Login() {
           setMessage(data.token);
         } else {
           sessionStorage.setItem("ltk", data.token);
-          navigate("/culture");
+          // navigate("/culture");
+          window.location.href = "/culture";
         }
       });
   }
