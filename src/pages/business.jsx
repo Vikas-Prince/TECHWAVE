@@ -23,7 +23,7 @@ function Business() {
     fetchNewsData();
   }, []);
 
-  if (sessionStorage.getItem("ltk") === null) {
+  if (sessionStorage.getItem("username") == null) {
     navigate("/login");
   } else {
     return <Template page="Business News" data={businessNews} />;

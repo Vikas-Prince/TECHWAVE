@@ -22,7 +22,7 @@ function Politics() {
     fetchNewsData();
   }, []);
 
-  if (sessionStorage.getItem("ltk") === null) {
+  if (sessionStorage.getItem("username") == null) {
     navigate("/login");
   } else {
     return <Template page="Politics News" data={politicsNews} />;

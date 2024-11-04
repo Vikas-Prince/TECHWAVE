@@ -74,3 +74,10 @@
     height: 400px;
   }
 }
+
+.ad-image {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Adds rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}

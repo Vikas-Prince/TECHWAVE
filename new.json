@@ -6,7 +6,6 @@
       "heading": "From Scandinavia to Big Sur: Eight of the world's best beach houses",
       "description": "The perfect coastal home must cope with shifting sands, heavy winds and sloped terrains – here are some of the smartest and most stunning designs in the world.",
       "image": "https://ichef.bbci.co.uk/images/ic/1024xn/p0j958ch.jpg.webp",
-
       "publisher": "https://th-i.thgim.com/public/migration_catalog/article10019356.ece/alternates/SQUARE_80/V.%20RAGHAVENDRA",
       "name": "V. RAGHAVENDRA",
       "p1": "Stilts for sloped terrain or shifting sands and sea; fabulous views; an internal courtyard; and a protective shutter system in case of extreme weather. These are some of the things on architects' checklists when they're designing a beach house. Whether it's in the Scottish Highlands or California's Big Sur, the elements and the experience must stay front of mind. On the Danish coast, The weather is unpredictable, so we design beach houses with intimate outdoor spaces and corners which shelter from different wind directions, says Danish architect, Mette Lange, whose book Earth, Sky & Water features some of her beach homes.",
@@ -615,6 +614,57 @@
       "p2": "Modi on Monday began a two-day high-profile visit to Russia for the 22nd India-Russia annual summit with President Putin, his first trip since the start of Moscow's invasion of Ukraine. Last month, the Ministry of External Affairs (MEA) said the issue of Indian nationals serving with the Russian Army remains a matter of 'utmost concern' and demanded action from Moscow over it.",
       "p3": "Earlier in March, 30-year-old Hyderabad resident Mohammed Asfan succumbed to injuries sustained while serving with the Russian troops on the frontlines with Ukraine. In February, Hemal Ashwinbhai Mangua, a 23-year-old resident of Surat, died in a Ukrainian air strike while serving as a 'security helper' in the Donetsk region. The Russian president hosted a private dinner for the Indian prime minister at the former's residence in Novo-Ogaryovo on the outskirts of Moscow late on Monday evening.",
       "p4": "On June 11, India said two Indian nationals, who were recruited by the Russian Army, had been killed in the ongoing Russia-Ukraine conflict, which took the number of such deaths to four. Following the deaths of two Indians, the MEA demanded a 'verified stop' to further recruitment of Indian nationals by the Russian Army. In a strongly-worded statement, it said India demanded that there be a '[verified stop to any further recruitment of Indian nationals by the Russian Army' and that such activities would not be in 'consonance with our partnership."
+    }
+  ],
+
+  "promotions": [
+    {
+      "image": "https://example.com/images/ad_nike.jpg",
+      "title": "Nike Sale",
+      "description": "Up to 30% off select shoes and apparel.",
+      "link": "https://www.nike.com/sale"
+    },
+    {
+      "image": "https://example.com/images/ad_amazon.jpg",
+      "title": "Amazon Prime Day",
+      "description": "Exclusive deals for Prime members only.",
+      "link": "https://www.amazon.com/primeday"
+    },
+    {
+      "image": "https://example.com/images/ad_target.jpg",
+      "title": "Target Weekly Ad",
+      "description": "Discover the latest deals and promotions.",
+      "link": "https://www.target.com/ad"
+    },
+    {
+      "image": "https://example.com/images/ad_starbucks.jpg",
+      "title": "Starbucks Rewards",
+      "description": "Join now and get free drinks on your birthday!",
+      "link": "https://www.starbucks.com/rewards"
+    },
+    {
+      "image": "https://example.com/images/ad_hulu.jpg",
+      "title": "Hulu Subscription Offer",
+      "description": "Get your first month for just $1!",
+      "link": "https://www.hulu.com/start"
+    },
+    {
+      "image": "https://example.com/images/ad_walmart.jpg",
+      "title": "Walmart Rollback Deals",
+      "description": "Check out our rollback prices on everyday essentials.",
+      "link": "https://www.walmart.com/rollback"
+    },
+    {
+      "image": "https://example.com/images/ad_uber_eats.jpg",
+      "title": "Uber Eats Promotions",
+      "description": "Get free delivery on your first order.",
+      "link": "https://www.ubereats.com"
+    },
+    {
+      "image": "https://example.com/images/ad_sephora.jpg",
+      "title": "Sephora Beauty Insider",
+      "description": "Sign up for exclusive offers and gifts.",
+      "link": "https://www.sephora.com/beautyinsider"
     }
   ]
 }
