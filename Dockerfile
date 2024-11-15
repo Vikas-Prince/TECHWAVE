@@ -1,9 +1,28 @@
-FROM node:18
+# Stage 1: Build the application
+FROM node:18 AS build
+
 WORKDIR /app
-COPY package*.json ./
+
+COPY package.json ./*
+
 RUN npm install 
+
 COPY . .
-WORKDIR /app/TECHWAVE/
+
+RUN npm run build
+
+
+# Stage 2: Prepare the production-ready container
+FROM node:18-slim AS production
+
+WORKDIR /app
+
+COPY --from=build /app/package*.json ./
+
+RUN npm install --production
+
+COPY --from=build /app/build /app/build
+
 EXPOSE 3000
-ENV REACT_APP_API_URL = "http://localhost:8100"
-CMD [ "npm", "start" ]
+
+CMD ["npm", "start"]
