@@ -3,7 +3,7 @@ FROM node:18 AS build
 
 WORKDIR /app
 
-COPY package.json ./*
+COPY package*.json ./
 
 RUN npm install 
 
@@ -21,7 +21,7 @@ COPY --from=build /app/package*.json ./
 
 RUN npm install --production
 
-COPY --from=build /app/build /app/build
+COPY --from=build /app/build ./build
 
 EXPOSE 3000
 
