@@ -23,10 +23,8 @@ RUN npm install --production
 
 COPY --from=build /app/build ./build
 
-COPY news.json ./news.json
+RUN npm install -g serve
 
-RUN npm install -g serve json-server
+EXPOSE 3000
 
-EXPOSE 3000 8100
-
-CMD ["sh", "-c", "serve -s build -l 3000 & json-server --watch news.json --port 8100"]
+CMD ["sh", "-c", "serve -s build -l 3000"]

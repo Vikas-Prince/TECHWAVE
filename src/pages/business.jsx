@@ -9,7 +9,7 @@ function Business() {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await fetch("http://localhost:8100/business", {
+        const response = await fetch("http://13.201.36.238:8100/business", {
           method: "GET",
         });
         const data = await response.json();
