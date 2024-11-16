@@ -27,4 +27,5 @@ COPY --from=build /app/build ./build
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["sh", "-c", "npm start && json-server --watch new.json --port 8100"]
+
