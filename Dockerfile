@@ -9,8 +9,6 @@ RUN npm install
 
 COPY . .
 
-ENV REACT_APP_API_URL = "http://localhost:8100"
-
 RUN npm run build
 
 
@@ -25,7 +23,8 @@ RUN npm install --production
 
 COPY --from=build /app/build ./build
 
-EXPOSE 3000
+RUN npm install -g serve
 
-CMD ["sh", "-c", "npm start && json-server --watch new.json --port 8100"]
+EXPOSE 3000 8100
 
+CMD ["sh", "-c", "serve -s build -l 3000 & json-server --watch new.json --port 8100"]
