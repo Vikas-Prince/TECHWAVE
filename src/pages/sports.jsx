@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 import Template from "../components/common/cmnTemp/cmnTemp";
 
 function Sports() {
-  const baseUrl = process.env.REACT_APP_API_URL;
-
   const [sportsNews, setSportsNews] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await fetch(`${baseUrl}/sports`, { method: "GET" });
+        const response = await fetch("http://localhost:8100/sports", {
+          method: "GET",
+        });
         const data = await response.json();
         setSportsNews(data);
       } catch (error) {
