@@ -23,7 +23,7 @@ RUN npm install --production
 
 COPY --from=build /app/build ./build
 
-RUN npm install -g serve
+RUN npm install -g serve json-server
 
 EXPOSE 3000 8100
 
