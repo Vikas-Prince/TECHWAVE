@@ -9,7 +9,7 @@ function Tech() {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await fetch("http://13.201.36.238:8100/tech", {
+        const response = await fetch("http://3.111.36.83:8100/tech", {
           method: "GET",
         });
         const data = await response.json();
