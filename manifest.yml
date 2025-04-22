@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-deployment
+  labels:
+    app: react-app
+    maintainer: vikas
+spec:
+  selectors:
+    matchLabels:
+      app: react-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      containers:
+        - name: react-app-container
+          image: vikasprince/newsapp:v1.1.0
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              memory: "500Mi"
+            requests:
+              memory: "600Mi"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-app-service
+spec:
+  selector:
+    app: react-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
