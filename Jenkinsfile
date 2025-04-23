@@ -49,7 +49,7 @@ pipeline{
         stage('Deploy k8s manifest application to the Kubernetes cluster'){
             steps {
                 withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'EKS-DevOps', contextName: '', credentialsId: 'k8s-token', namespace: 'frontend', serverUrl: 'https://CE5FEB5F965E1A06424B71277BDD85E3.gr7.ap-south-1.eks.amazonaws.com']]) {
-                    sh "kubectl apply -f k8sdeployment-service.yml"
+                    sh "kubectl apply -f manifest.yml"
                 }
             }
         }

@@ -1,20 +1,20 @@
 import React from "react";
-import Header from "./components/common/header/Header";
+import Header from "./components/common/header/Header.jsx";
 import "./App.css";
-import Homepages from "./components/home/Homepages";
-import Footer from "./components/common/footer/Footer";
+import Homepages from "./components/home/Homepages.jsx";
+import Footer from "./components/common/footer/Footer.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SinglePage from "./components/singlePage/SinglePage";
-import Culture from "./pages/culture/Culture";
-import Routing from "./Routing";
-import Innovations from "./pages/innovations";
-import Tech from "./pages/tech";
-import Business from "./pages/business";
-import Sports from "./pages/sports";
-import Politics from "./pages/politics";
+import SinglePage from "./components/singlePage/SinglePage.jsx";
+import Culture from "./pages/culture/Culture.jsx";
+import Routing from "./Routing.js";
+import Innovations from "./pages/innovations.jsx";
+import Tech from "./pages/tech.jsx";
+import Business from "./pages/business.jsx";
+import Sports from "./pages/sports.jsx";
+import Politics from "./pages/politics.jsx";
 import Login from "./pages/login/login.jsx";
 import Register from "./pages/Register/Register.jsx";
-import NewsDetails from "./components/common/cmnTemp/NewsDetails";
+import NewsDetails from "./components/common/cmnTemp/NewsDetails.jsx";
 const App = () => {
   return (
     <>
