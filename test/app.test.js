@@ -65,7 +65,7 @@ describe("Conditional Rendering Logic", () => {
 
 describe("Toggle State Logic", () => {
   it("should toggle the value between true and false", () => {
-    let isToggled = false;
+    let isToggled = true;
 
     function toggle() {
       isToggled = !isToggled;
