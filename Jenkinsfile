@@ -3,9 +3,14 @@ pipeline {
         label 'slave'
     }
 
+    parameters {
+        string(name: 'DOCKER_IMAGE', defaultValue: 'vikasprince/test1', description: 'Docker Image')
+        string(name: 'DOCKER_TAG', defaultValue: 'v1.1.0', description: 'Docker Tag')
+    }
+
     environment {
-        DOCKER_IMAGE = "vikasprince/test1"
-        DOCKER_TAG = "v1.1.0"
+        DOCKER_IMAGE = "${params.DOCKER_IMAGE}"
+        DOCKER_TAG = "${params.DOCKER_TAG}"
     }
 
     stages {
