@@ -6,7 +6,7 @@ metadata:
     app: react-app
     maintainer: vikas
 spec:
-  selectors:
+  selector:
     matchLabels:
       app: react-app
   strategy:
@@ -27,9 +27,9 @@ spec:
             - containerPort: 3000
           resources:
             limits:
-              memory: "500Mi"
-            requests:
               memory: "600Mi"
+            requests:
+              memory: "500Mi"
 
 ---
 
