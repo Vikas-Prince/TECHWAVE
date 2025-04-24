@@ -4,7 +4,7 @@ pipeline {
     }
 
     parameters {
-        string(name: 'DOCKER_IMAGE', defaultValue: 'vikasprince/test12', description: 'Docker Image')
+        string(name: 'DOCKER_IMAGE', defaultValue: 'vikasprince/newsapp', description: 'Docker Image')
         string(name: 'DOCKER_TAG', defaultValue: 'v1.1.0', description: 'Docker Tag')
     }
 
@@ -77,9 +77,7 @@ pipeline {
             parallel {
                 stage("Push Image Docker to Docker Hub") {
                     steps {
-                        withDockerRegistry(credentialsId: 'docker-cred', url: 'https://docker.io') {
-                            sh 'docker push ${DOCKER_IMAGE}:${DOCKER_TAG}'
-                        }
+                        sh 'docker push ${DOCKER_IMAGE}:${DOCKER_TAG}'
                     }
                 }
 
