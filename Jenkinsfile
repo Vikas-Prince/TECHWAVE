@@ -51,7 +51,7 @@ pipeline {
             parallel {
                 stage("Build Docker Image") {
                     steps {
-                        withDockerRegistry(credentialsID: 'docker-cred', url: 'https://docker.io') {
+                        withDockerRegistry(credentialsId: 'docker-cred', url: 'https://docker.io') {
                             sh 'docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .'
                         }
                     }
@@ -72,7 +72,7 @@ pipeline {
             parallel {
                 stage("Push Image Docker to Docker Hub") {
                     steps {
-                        withDockerRegistry(credentialsID: 'docker-cred', url: 'https://docker.io') {
+                        withDockerRegistry(credentialsId: 'docker-cred', url: 'https://docker.io') {
                             sh 'docker push ${DOCKER_IMAGE}:${DOCKER_TAG}'
                         }
                     }
