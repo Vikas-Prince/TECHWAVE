@@ -4,7 +4,7 @@ pipeline {
     }
 
     parameters {
-        string(name: 'DOCKER_IMAGE', defaultValue: 'vikasprince/test1', description: 'Docker Image')
+        string(name: 'DOCKER_IMAGE', defaultValue: 'vikasprince/test12', description: 'Docker Image')
         string(name: 'DOCKER_TAG', defaultValue: 'v1.1.0', description: 'Docker Tag')
     }
 
