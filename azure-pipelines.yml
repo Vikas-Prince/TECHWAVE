@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: test agent
 
 steps:
 - task: NodeTool@0
@@ -19,3 +19,7 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- script: | 
+    docker -t build reactapp .
+  displayName: 'build docker image'
